@@ -1,0 +1,126 @@
+.card { background: white; border: rgb(206, 199, 199) solid 1px; height: 247px; width: 980px; display: flex; flex-wrap: wrap; font-family: 'Open Sans', sans-serif; padding: 0; transition: 0.3s; margin-bottom: 10px; --dp-bg-ape: none; } 
+
+
+.btn3 { display: var(--dp-bg-ape)!important; } 
+.btn4 { display: var(--dp-bg-ape)!important; } 
+
+
+.card:hover { background: white; border: rgb(206, 199, 199) solid 1px; width: 980px; height: 247px; display: flex; flex-wrap: wrap; font-family: 'Open Sans', sans-serif; box-shadow: 5px 5px 10px #000000; margin-bottom: 10px; --dp-bg-esconde: none; --dp-bg-aparece: block; } 
+
+
+.local { font-size: 14px; color: rgb(123, 123, 123); margin-top: 10px; margin-left: 5px; } 
+
+
+h3 { margin-left: 5px; text-align: left; } 
+
+.dtt { text-align: left; } 
+
+
+.distintivos { border-radius: 10px; border-style: hidden; background: rgb(236, 227, 227); color: gray; font-size: 11px; margin-left: 5px; padding: 4px; }
+
+.distintivos:hover { border-radius: 10px; border-style: hidden; background: rgb(197, 189, 189); color: rgb(240, 234, 234); font-size: 11px; margin-left: 5px; padding: 4px; } 
+/* 
+
+.btnV { background: rgba(0, 0, 0, 0.445); padding: 5px; color: rgb(250, 245, 245); width: 40px; height: 40px; border-radius: 0px 5px 5px 0px; transition: 0.5s; } 
+
+.btnV:hover { background: rgba(0, 0, 0, 0.76); padding: 5px; color: rgb(250, 245, 245); padding-left: 10px; width: 35px; border-radius: 0px 5px 5px 0px; } 
+
+.btnA { background: rgba(0, 0, 0, 0.445); padding: 5px; color: rgb(250, 245, 245); width: 40px; height: 40px; border-radius: 5px 0px 0px 5px; transition: 0.5s; } 
+
+.btnA:hover { background: rgba(0, 0, 0, 0.76); padding: 5px; color: rgb(250, 245, 245); padding-right: 10px; width: 35px; border-radius: 5px 0px 0px 5px; } 
+*/
+
+
+a { text-decoration: none; } 
+/* 
+.avancar { position: absolute; top: 100px; left: 329px; transition: 0.5s; } 
+
+.avancar:hover { position: absolute; top: 100px; left: 324px; }*/
+
+/* .voltar { position: absolute; top: 100px; left: 0px; } */
+
+.btn2 { font-size: medium; padding: 10px; color: #EE6500; border: none; background: none; } 
+
+.btn2:hover { font-size: medium; background: #EE6500; color: white; border-radius: 5px; padding: 10px; } 
+
+.final { display: flex; justify-content: flex-start; } 
+
+
+.testeCarrossel { height: 247px; width: 348px; } 
+
+
+.testeCarrossel { display: block } 
+
+.apText { max-width: 600px; width: 100%; margin-left: 10px; position: relative; } 
+
+
+.ajusteText { max-width: 600px; width: 100%;display: block;top: 0px;left: 0px;}
+
+.esp { font-size: medium; margin-bottom: 18px; margin-left: 5px; text-align: left; } 
+
+.btns { margin-top: 20px; margin-left: 40px; display: flex; flex-wrap: wrap; } 
+
+.logo { margin-left: 317px; margin-top: 10px; } 
+
+.apImg { max-height: 247px; max-width: 346px; width: 100%; height: 100%; position: relative; z-index: 0; } 
+
+.imgApAjustar { max-height: 247px; max-width: 368px; width: 100%; height: 100%; display: block; top: 0px; left: 0px; margin: 0px; } 
+
+.mainContainer { display: table; width: 100%; } 
+
+.centralizar { display: table-cell; text-align: center; vertical-align: middle; } 
+
+.marginAuto { max-width: 665px; margin: 0 auto; } 
+
+a { text-decoration: none; color:#fff; } 
+
+.ajustaBtnBuscar { width: 100%; margin-left: 15px; background-color: #979797; border-radius: 5px; padding: 10px; font-weight:bold; cursor: pointer; margin-bottom: 5px; } 
+
+
+#inputValor { width: 50%; } 
+
+
+.ajustaBtnBuscar:hover { background-color: #ff5a00; } 
+
+#botoes { padding: 0px; } 
+
+.ajustaBtnBuscar,ul { list-style-type: none; margin-left: 0!important;}
+
+#templateHTML { margin-left: 160px; } 
+/* 
+.navegaFotos { width: 348px; margin: 0px; padding: 0; position: absolute; z-index: 1; top: 0px; left: 0px; } 
+.navegaFotos li:first-child { float: left } 
+.navegaFotos li:last-child { float: right } */
+
+.btn3 { display: var(--dp-bg-aparece); } 
+.btn4 { display: var(--dp-bg-aparece); } 
+
+.logotipo { display: var(--dp-bg-esconde); } 
+
+#carregarMaisImoveis { position: fixed; bottom: 0; left: 0; display: none; width: 100%; height: 20px; font-size: 13px; background: #ff5a00; color: #FFF; text-align: center; } 
+
+#templateSELECT { width: 205px; } 
+
+ /* carrossel começo */
+
+@keyframes display { 
+ 0% { transform: translateX(0px); opacity: 0; } 
+ 10% { transform: translateX(0); opacity: 1; } 
+ 20% { transform: translateX(0); opacity: 1; } 
+ 30% { transform: translateX(0px); opacity: 0; } 
+ 100% { transform: translateX(0px); opacity: 0; } 
+ }
+
+
+.lista { position: relative; top: 0px; left: 0px; } 
+
+.lista > img { position: absolute; top: 0; opacity: 0; animation: display 10s infinite; } 
+ 
+ img:nth-child(2) { animation-delay: 2s; } 
+ img:nth-child(3) { animation-delay: 4s; } 
+ img:nth-child(4) { animation-delay: 6s; } 
+ img:nth-child(5) { animation-delay: 8s; } 
+
+ /* carrossel fim */
+
+#quantidade {text-align: left;padding-left: 17px; } 

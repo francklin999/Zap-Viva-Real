@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>..::Zap Viva Real::..</title>
+</head>
+
+<body>
+    <main class="mainContainer">
+        <div class="centralizar">
+            <div class="marginAuto">
+
+                <div id="btos-action-filter">
+                    <h1>ZAP VIVA REAL</h1>
+                    <h4>Insira o que você precisa e o valor que deseja ver</h4>
+                    <label for="comprAluga">Tipo de negócio: </label>
+                    <select id="comprAluga">
+                        <option value="" selected>Todos</option>
+                        <option value="RENTAL">Alugar</option>
+                        <option value="SALE">Comprar</option>
+                    </select>
+                    <label for="templateSELECT">Selecione o bairro: </label>
+                    <select id="templateSELECT">
+                        <option value="" selected>Todos</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="inputValor">Valor desejado: </label>
+                    <input type="text" id="inputValor" onkeyup="mascara(this.value)"
+                        placeholder="Digite o valor desejado." maxlength="22"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+                    <div>
+                        <p>Busca avançada? </p>
+                        <input type="radio" id="sim" onclick="filtroAvancado(this)" name="filtro" value="1">
+                        <label for="sim">Sim</label>
+                        <input type="radio" id="nao" checked="true" onclick="filtroAvancado(this)" name="filtro" value="0">
+                        <label for="nao">Não</label>
+
+                        <ul id="quantidade">
+                            <li>
+                                Quarto(s): <input type="range" id="quarto" value="0" min="0" max="5"><span
+                                    id="spQuarto">0</span>
+                            </li>
+                            <li>
+                                Banheiro(s): <input type="range" id="banheiro" value="0" min="0" max="10"><span
+                                    id="spBanheiro">0</span>
+                            </li>
+                            <li>Vaga(s) estacionamento:
+                                <input type="range" id="estacionamento" value="0" min="0" max="6"><span
+                                    id="spEstacionamento">0</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul id="botoes">
+                        <li id="btnListarMenor" class="ajustaBtnBuscar"><a href="#">Listar menor que <span
+                                    class="valor">R$ 0,00</span></a></li>
+                        <li id="btnListarMaior" class="ajustaBtnBuscar"><a href="#">Listar maior que <span
+                                    class="valor2">R$ 0,00</span></a></li>
+                        <li id="btnListarTodos" class="ajustaBtnBuscar"><a href="#">Listar todos imóveis</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="templateHTML">
+            </div>
+        </div>
+    </main>
+    <span id="carregarMaisImoveis">Carregando mais imóveis...</span>
+    <script src="js/script.js"></script>
+    <script src="js/html-carrossel.js"></script>
+    <script src="js/repositorio2.js"></script>
+    <script src="js/repositorio.js"></script>
+    <script src="js/html-select.js"></script>
+
+</body>
+
+</html>
