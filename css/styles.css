@@ -1,5 +1,5 @@
+body{background: linear-gradient(315deg, rgb(87, 87, 245) 0%,rgb(255, 147, 70) 74%);background-size: 100% 100%;background-attachment: fixed;}
 .card { background: white; border: rgb(206, 199, 199) solid 1px; height: 247px; width: 980px; display: flex; flex-wrap: wrap; font-family: 'Open Sans', sans-serif; padding: 0; transition: 0.3s; margin-bottom: 10px; --dp-bg-ape: none; } 
-
 
 .btn3 { display: var(--dp-bg-ape)!important; } 
 .btn4 { display: var(--dp-bg-ape)!important; } 

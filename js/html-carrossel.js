@@ -54,7 +54,6 @@ const htmlPrinter = (response, targets) => {
         `
 
     })
-    templateHTML.innerHTML = " ";
 
     targets.insertAdjacentHTML("beforeend", templateMontado);
 }

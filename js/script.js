@@ -49,13 +49,16 @@ const filtroAvancado = () => {
 
 window.onload = () => {
     quantidade.style.display = 'none';
-    sessionStorage.clear()
+    sessionStorage.clear();
 }
 
 
 window.onscroll = () => {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        rolagemPag(templateHTML);
+        let dados = sessionStorage.getItem('listaImoveis');
+        if (dados != 0 && dados != null) {
+            rolagemPag(templateHTML);
+        }
     }
 };
 
@@ -87,7 +90,6 @@ const rolagemPag = (templateHTML) => {
         recuperadosLocalSession.length < 19 ? loopLimite = recuperadosLocalSession.length : loopLimite = 20;
 
         const proximaPagina = [];
-
         for (let i = 0; i < loopLimite; i++) {
             proximaPagina.push(recuperadosLocalSession[i])
         }
@@ -111,6 +113,7 @@ btnListarTodos.addEventListener('click', () => {
 
 btnListarMaior.addEventListener('click', () => {
     let arrayFA = []
+    templateHTML.innerHTML = " ";
     sessionStorage.clear();
     if (inputValue.value != null && inputValue.value != '') {
         let listaMaior = imoveisValorMaior(arrayListaCompleto, replaces(inputValue.value))
@@ -131,6 +134,7 @@ btnListarMaior.addEventListener('click', () => {
 
 btnListarMenor.addEventListener('click', () => {
     let arrayFA = []
+    templateHTML.innerHTML = " ";
     sessionStorage.clear();
     if (inputValue.value != null && inputValue.value != '') {
         let listaMenor = imoveisValorMenor(arrayListaCompleto, replaces(inputValue.value))
@@ -269,6 +273,7 @@ const insereTexto = (ev) => {
 const fluxoPrincipal = () => {
     let arrayFA = []
     sessionStorage.clear();
+    templateHTML.innerHTML = " ";
     let listarTodos = imoveisValidos(arrayListaCompleto)
     if (filtroAvancado()) {
         listarTodos.forEach(item => {
